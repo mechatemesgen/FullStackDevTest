@@ -7,9 +7,13 @@ const MainContent = ({ result, setResultLink, isProcessing, setIsProcessing, onG
   return (
     <>
       <h1 className="text-3xl font-bold text-center text-gray-900 mb-8">CSV Processor</h1>
-      <UploadForm setResultLink={setResultLink} setIsProcessing={setIsProcessing} result={result} />
+      {!result && (
+        <UploadForm setResultLink={setResultLink} setIsProcessing={setIsProcessing} result={result} />
+      )}
       <ProgressIndicator isProcessing={isProcessing} />
-      <ResultDownload resultLink={result?.downloadLink} filename={result?.filename} onGoBack={onGoBack} />
+      {result && (
+        <ResultDownload resultLink={result?.downloadLink} filename={result?.filename} onGoBack={onGoBack} />
+      )}
     </>
   );
 };
