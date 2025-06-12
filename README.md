@@ -17,6 +17,7 @@
 1. Clone the repository:
     ```bash
     git clone https://github.com/mechatemesgen/FullStackDevTest.git
+
     cd FullStackDevTest
     ```
 
@@ -34,16 +35,16 @@
 
 ### Running the Application
 
-1. Start the backend server:
+
+1. Start the frontend development server:
     ```bash
-    cd backend
-    npm start
+    npm run dev
     ```
 
-2. Start the frontend development server:
+2. Start the backend server:
     ```bash
-    cd ../frontend
-    npm run dev
+    cd ../backend
+    npm start
     ```
 
 The frontend will typically run on [http://localhost:5173](http://localhost:5173) and the backend on [http://localhost:3000](http://localhost:3000).
